@@ -1,0 +1,22 @@
+
+<td><button routerLink="/insertdata" class="btn btn-success">Add</button></td>
+<br>
+<br>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">nama</th>
+            <th scope="col">keterangan</th>
+            <th scope="col">action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let kl of daftarkelas">
+            <td>{{kl.id}}</td>
+            <td>{{kl.nama}}</td>
+            <td>{{kl.keterangan}}</td>
+            <td><button routerLink="/editkelas/{{kl.id}}" class="btn btn-warning">Edit</button></td>
+        </tr>
+    </tbody>
+</table>
