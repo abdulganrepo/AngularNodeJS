@@ -10,6 +10,12 @@ import { DetailKelasComponent } from './detail-kelas/detail-kelas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DaftarkelasComponent } from './daftarkelas/daftarkelas.component';
 import { InsertdataComponent } from './insertdata/insertdata.component';
+import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataTablesModule } from 'angular-datatables';
+
+
 
 @NgModule({
   declarations: [
@@ -26,6 +32,10 @@ import { InsertdataComponent } from './insertdata/insertdata.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    CommonModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

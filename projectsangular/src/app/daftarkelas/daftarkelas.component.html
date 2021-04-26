@@ -1,22 +1,16 @@
-
 <td><button routerLink="/insertdata" class="btn btn-success">Add</button></td>
 <br>
 <br>
-<table class="table">
-    <thead class="thead-dark">
+<form [formGroup]="cariDataForm" method="POST">
+    <table>
         <tr>
-            <th scope="col">id</th>
-            <th scope="col">nama</th>
-            <th scope="col">keterangan</th>
-            <th scope="col">action</th>
+            <td><label for="nama">Cari Data</label></td>
+            <td><input type="text" formControlName="nama" placeholder="nama..">
+            </td>
         </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let kl of daftarkelas">
-            <td>{{kl.id}}</td>
-            <td>{{kl.nama}}</td>
-            <td>{{kl.keterangan}}</td>
-            <td><button routerLink="/editkelas/{{kl.id}}" class="btn btn-warning">Edit</button></td>
-        </tr>
-    </tbody>
+        <button type="submit" (click)=" cariData()" class="btn btn-secondary">Cari
+            Data</button>
+    </table>
+</form>
+<table [dtOptions]="dtOptions" datatable class="table">
 </table>
